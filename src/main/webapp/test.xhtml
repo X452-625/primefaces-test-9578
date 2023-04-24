@@ -16,7 +16,10 @@
 
         <h1>#{testView.string}</h1>
         <h:form id="frmTest">
-            
+            <p:autoComplete id="autoComplete" forceSelection="true" dropdown="true" cache="true"
+                            value="#{testView.selected}" completeMethod="#{testView.complete}"
+                            var="item" itemLabel="#{item.label}" itemValue="#{item}"
+                            converter="#{selectItemConverter}" />
         </h:form>
 
     </h:body>
